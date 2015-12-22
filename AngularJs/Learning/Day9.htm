@@ -1,0 +1,28 @@
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../Scripts/angular.min.js"></script>
+						<script src="../controllers/controllerDay9.js"></script>
+	</head>
+	<body>
+		<div ng-controller="Day9Ctrl">
+			<select ng-model="Select1" ng-options="lottery.ProductName for lottery in lotteryModel">
+				<option value="">---請選擇---</option>
+			</select>
+			<br /><br />
+			妳選擇的是 {{Select1.ProductName}} {{Select1.id}}
+		</div>
+		<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>
+<!--
+  HTML SELECT事件有一個ng-options參數，
+
+ng-options透過ng-model 綁定，用來顯示下拉選單。
+
+
+介紹HTML SELECT事件如何在angularJS中應用。
+-->

@@ -1,0 +1,18 @@
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../Scripts/angular.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<p>My name is {{yourName || 'Lex'}}!</p>
+			<label>請輸入你的名字，也和大家自我介紹吧!</label>
+			<input type="text" ng-model="yourName">
+		</div>
+		<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>
+<!-- 變數後面要加上|| 主要的目的是：如果無法獲得yourName變數的值，就可以預先顯示"Anna這個字串" -->

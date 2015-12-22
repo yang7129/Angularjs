@@ -1,0 +1,36 @@
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../Scripts/angular.min.js"></script>
+						<script src="../controllers/controllerDay15.js"></script>
+	</head>
+	<body>
+		<div ng-controller="Day15Ctrl">
+			 <p>請輸入您的完整地址:</p> 
+			 <select ng-model="SelectCity"  ng-options="a.city for a in address">
+				 <option value="">--縣市--</option>
+			 </select><br />
+			 <p>請輸入您的完整地址:</p> 
+			 <select ng-model="SelectTown" ng-options="t.name for t in towns[SelectCity.value].townName">
+				 <option value="">--鄉鎮市區--</option>
+			 </select>
+			 <input type="text" ng-model="myAddress"></input>
+			 <br />
+			 <span>{{SelectTown.zipCode}} {{SelectCity.city}} {{SelectTown.name}} {{myAddress}} {{town}}</span>
+			 
+		</div>
+		<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>
+<!--
+  angularJS的特性是遵循MVC框架。
+
+view是用來顯示資料
+
+model是用來存放資料
+
+controller是用來建立view與model之間的行為，處理事件。
+-->

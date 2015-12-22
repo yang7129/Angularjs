@@ -1,0 +1,60 @@
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../Scripts/angular.min.js"></script>
+		<script src="../controllers/controllerDay5.js"></script>
+		<style type="text/css">
+			.msg_table{ background-color:black; color:#fff; padding:5px; }
+			
+			.reply_msg_table{ background-color:grey; color:#fff; padding:5px;}
+			/*範例二用*/
+		</style>
+	</head>
+	<body>
+		<div ng-controller="Day5Ctrl">範例一
+			<br />Click Me:
+			<input type="checkbox" ng-model="checked"></input>
+			<br />Show:
+			<span ng-show="checked">妳已經按下顯示</span>
+			<br />Hide:
+			<span ng-hide="checked">妳沒有按下顯示</span>
+			<br />
+			<hr>範例二
+			<br />展開中文說明
+			<input type="checkbox" ng-model="checked2"></input>
+			<br />
+			<div class="msg_table">英文: John is at the tailor's ordering a suit.</div>
+			<div ng-show="checked2" class="reply_msg_table">中文: 約翰在裁縫店訂一套西裝。</div>
+			<div class="msg_table">英文: John is at the tailor's for a fitting.</div>
+			<div ng-show="checked2" class="reply_msg_table">中文: 約翰正在裁縫店試衣。</div>
+			<br />
+			<hr>範例三
+			<br />選擇英文例句
+			<br />
+			<select ng-model="selection">
+				<option value="content1">Tailored Suit 訂做西裝</option>
+				<option value="content2">Altering Suit 修改西裝</option>
+			</select>
+			<div class="container">
+				<article ng-show="selection == 'content1'">
+					<h2 class="h2">Tailored Suit 訂做西裝</h2>
+					<br>
+					<p>John is at the tailor's ordering a suit.</p>
+					<br />
+					<p>約翰在裁縫店訂一套西裝。</p>
+				</article>
+				<article ng-show="selection == 'content2'">
+					<h2 class="h2">Altering Suit 修改西裝</h2>
+					<br>
+					<p>John is at the tailor's for a fitting.</p>
+					<p>約翰正在裁縫店試衣。</p>
+				</article>
+			</div>
+		</div>
+		<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>
+<!-- ng-show/ng-hide是有條件的顯示/隱藏html內的內容。 -->

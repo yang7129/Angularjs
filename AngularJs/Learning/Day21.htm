@@ -1,0 +1,24 @@
+<html ng-app='app'>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../Scripts/angular.min.js"></script>
+		<script src="../Scripts/angular-sanitize.js"></script>
+		<script src="../controllers/controllerDay21.js"></script>
+	</head>
+	<body>
+		<div ng-controller="Day21Ctrl">
+			<p>使用ng-bind-html-unsafe：</p>
+			<!-- //在AngularJS 1.2之後的版本，ng-bind-html已經取代ng-bind-html-unsafe。-->
+			<div ng-bind-html-unsafe="someHtml"></div>
+			<p>使用ng-bind：</p>
+			<pre ng-bind="someHtml"></pre>
+			<p>使用ng-bind-html：</p>
+			<div ng-bind-html="someHtml"></div>
+		</div>
+		<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>
+<!-- -->

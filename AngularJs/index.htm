@@ -1,0 +1,15 @@
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="Scripts/angular.min.js"></script>
+		<script src="controllers/controllerIndex.js"></script>
+	</head>
+	<body ng-controller="IndexCtrl">
+		超快速搜尋<input type="search" ng-model="search" />
+		<div ng-repeat="Ahtml in AhtmlModel | filter:search ">
+			<a ng-href="{{Ahtml.page}}">{{Ahtml.name}}</a>
+		</div>
+	
+	</body>
+
+</html>

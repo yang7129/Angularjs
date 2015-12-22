@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app>
+  
+  <head>
+    <meta charset=utf-8 />
+    <title></title>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../controllers/controllerDay11.js"></script>
+  </head>
+  
+  <body>
+    <div ng-controller="Day11Ctrl">範例一
+      <input type="checkbox" ng-model="confirmed" ng-change="change()" />
+      <br />confirmed = {{confirmed}}
+      <br />counter = {{counter}}  每次會增加1
+      <hr>範例二
+      <br />下拉選
+      <br />
+      <select ng-options="size as size.counter for size in sizes" ng-model="item" ng-change="update()"></select>
+      <br />item.counter = {{item.counter}} 每次會會乘以3
+      <br />item.name = {{item.name}}
+      <br />item.code = {{item.code}}
+      <br />
+    </div>
+<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>

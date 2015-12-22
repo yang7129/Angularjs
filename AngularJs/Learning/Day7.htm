@@ -1,0 +1,29 @@
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../Scripts/angular.min.js"></script>
+		<script src="../controllers/controllerDay7.js"></script>
+	</head>
+	<body>
+		<div ng-controller="Day7Ctrl">顯示總共人數
+			<br />
+			搜尋<input type="search" ng-model="q" />
+			<br />
+			<div ng-repeat="name in names | filter:q  ">{{$index+1}}.{{name}}
+				<br />
+			</div>上列共{{names.length}}筆資料
+			<br />
+			搜尋<input type="search" ng-model="w" />
+			<ul>還可以按喔
+				<li ng-repeat="item in items | filter:w">
+					<div ng-click="checked(item.title + item.status)">{{item.title}} {{item.status}}</div>
+				</li>
+			</ul>以上有{{items.length}}筆資料
+			<br />{{select}}</div>
+		<hr>
+		<br />
+		<a href="../index.htm">index</a>
+	</body>
+
+</html>
+<!-- 我們可以透過ng-repeat指令，從陣列中取出每一個item的內容。-->
